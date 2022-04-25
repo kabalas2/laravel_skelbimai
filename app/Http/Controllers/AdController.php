@@ -1,5 +1,5 @@
 <?php
-
+// CRUD Create Read Update Delete
 namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreAdRequest;
@@ -40,6 +40,7 @@ class AdController extends Controller
      */
     public function store(StoreAdRequest $request)
     {
+
         $ad = new Ad();
         $ad->title = $request->post('title');
         $ad->slug = Str::slug($ad->title);
@@ -96,6 +97,7 @@ class AdController extends Controller
      */
     public function update(UpdateAdRequest $request, Ad $ad)
     {
+
         $ad->title = $request->post('title');
         $ad->content = $request->post('content');
         $ad->years = $request->post('years');

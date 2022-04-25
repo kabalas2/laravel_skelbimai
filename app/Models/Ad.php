@@ -16,11 +16,11 @@ class Ad extends Model
 
     public function user()
     {
-        return $this->hasOne(User::class, 'id','user_id');
+        return $this->hasOne(User::class, 'id', 'user_id');
     }
 
     public function type()
     {
-        return $this->hasOne(Type::class,'id','type_id');
+        return $this->hasOne(Type::class, 'id', 'type_id');
     }
 }
