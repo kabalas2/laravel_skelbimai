@@ -81,7 +81,10 @@ class AdController extends Controller
      */
     public function edit(Ad $ad)
     {
-        //
+        $data['ad'] = $ad;
+        $data['colors'] = Color::all();
+        $data['types'] = Type::all();
+        return view('ads.edit', $data);
     }
 
     /**
@@ -93,7 +96,20 @@ class AdController extends Controller
      */
     public function update(UpdateAdRequest $request, Ad $ad)
     {
-        //
+        $ad->title = $request->post('title');
+        $ad->content = $request->post('content');
+        $ad->years = $request->post('years');
+        $ad->price = $request->post('price');
+        $ad->image = $request->post('image');
+        $ad->vin = $request->post('vin');
+        $ad->user_id = Auth::id();
+        $ad->active = 1;
+        $ad->model_id = 1;
+        $ad->type_id = $request->post('type_id');
+        $ad->category_id = 1;
+        $ad->color_id = $request->post('color_id');
+        $ad->manufacturer_id = 1;
+        $ad->save();
     }
 
     /**
