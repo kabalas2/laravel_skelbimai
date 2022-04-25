@@ -69,7 +69,8 @@ class AdController extends Controller
      */
     public function show(Ad $ad)
     {
-
+        $data['ad'] = $ad;
+        return view('ads.single', $data);
     }
 
     /**
