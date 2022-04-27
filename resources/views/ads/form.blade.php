@@ -40,6 +40,23 @@
                                         <option value="{{$type->id}}">{{$type->name}}</option>
                                     @endforeach
                                 </select>
+                                <select name="manufacturer_id" class="form-control">
+                                    <option>Manufacturer</option>
+                                    <option value="1">AUdi</option>
+                                    <option value="2">Bmw</option>
+                                    <option value="3">Citroen</option>
+                                    <option value="4">Dacia</option>
+                                </select>
+                                <select name="model_id" class="form-control">
+                                    <option>Model</option>
+                                    <option value="1">A4</option>
+                                    <option value="1">A6</option>
+                                    <option value="2">320</option>
+                                    <option value="2">530</option>
+                                    <option value="3">C4</option>
+                                    <option value="3">C3</option>
+                                    <option value="4">Seran</option>
+                                </select>
                                 <input type="submit" value="Sukurti" class="btn btn-primary">
                             </div>
                         </form>
