@@ -9,7 +9,7 @@
 
                     <div class="card-body">
                         <div class="col-6">
-                           <img src="{{$ad->image}}">
+                           <img width="100%" src="{{$ad->image}}">
                         </div>
                         <div class="col-6">
                             <p>

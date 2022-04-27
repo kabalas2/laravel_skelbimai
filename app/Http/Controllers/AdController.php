@@ -19,7 +19,8 @@ class AdController extends Controller
      */
     public function index()
     {
-        //
+        $data['ads'] = Ad::all();
+        return view('ads.list', $data);
     }
 
     /**
