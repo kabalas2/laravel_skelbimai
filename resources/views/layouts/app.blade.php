@@ -67,6 +67,9 @@
                                     <a class="dropdown-item" href="{{route('ad.create')}}">
                                         Add new Ad
                                     </a>
+                                    <a class="dropdown-item" href="{{route('profile.ads')}}">
+                                        My ads
+                                    </a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">

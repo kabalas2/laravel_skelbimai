@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'landingpage'])->name('homepage');
+Route::get('/profile/ads', [App\Http\Controllers\UserPanelController::class, 'myAds'])->name('profile.ads');
 
 Auth::routes();
 
