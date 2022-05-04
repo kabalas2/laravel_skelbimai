@@ -19,4 +19,12 @@ Route::get('/profile/ads', [App\Http\Controllers\UserPanelController::class, 'my
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::resource('/ad','App\Http\Controllers\AdController');
+Route::resource('/ad', 'App\Http\Controllers\AdController');
+
+
+// Messages
+
+Route::get('/messages/send/{reseiverId}', [App\Http\Controllers\MessageController::class, 'create'])->name('messages.create');
+Route::get('/messages/read/{chatFrienId}', [App\Http\Controllers\MessageController::class, 'read'])->name('messages.read');
+Route::get('/messages', [App\Http\Controllers\MessageController::class, 'inbox'])->name('messages.inbox');
+Route::post('/messages/send', [App\Http\Controllers\MessageController::class, 'send'])->name('messages.send');

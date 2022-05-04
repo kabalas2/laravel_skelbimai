@@ -19,7 +19,7 @@ class AdController extends Controller
      */
     public function index()
     {
-        $data['ads'] = Ad::all();
+        $data['ads'] = Ad::paginate(42);
         return view('ads.list', $data);
     }
 
