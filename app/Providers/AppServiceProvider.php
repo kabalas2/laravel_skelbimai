@@ -29,6 +29,7 @@ class AppServiceProvider extends ServiceProvider
         {
             if (Auth::check()) {
                 $notReaded = Message::where('reseiver_id',Auth::id())->where('seen', 0)->count();
+                $notReaded = $notReaded > 0 ? ' ('.$notReaded.')' : '';
                 view()->share('notRead', $notReaded);
             }
 

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -24,7 +25,13 @@ class HomeController extends Controller
     public function index()
     {
         $this->middleware('auth');
-        return view('home');
+        $user = Auth::user();
+        if($user->role_id != 1){
+            return view('home');
+        }else{
+            return view('home');
+        }
+
     }
 
     public function landingpage()

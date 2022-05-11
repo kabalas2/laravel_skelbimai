@@ -41,6 +41,7 @@
                             </ul>
                         </div>
                     </div>
+                    <a href="{{route('messages.create', $ad->user->id)}}">send messege to author</a>
                 </div>
             </div>
         </div>

@@ -28,3 +28,5 @@ Route::get('/messages/send/{reseiverId}', [App\Http\Controllers\MessageControlle
 Route::get('/messages/read/{chatFrienId}', [App\Http\Controllers\MessageController::class, 'read'])->name('messages.read');
 Route::get('/messages', [App\Http\Controllers\MessageController::class, 'inbox'])->name('messages.inbox');
 Route::post('/messages/send', [App\Http\Controllers\MessageController::class, 'send'])->name('messages.send');
+
+Route::get('/admin/ads', [App\Http\Controllers\AdminController::class, 'ads'])->name('admin.ads');

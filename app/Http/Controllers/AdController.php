@@ -8,6 +8,7 @@ use App\Models\Ad;
 use App\Models\Color;
 use App\Models\Type;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Str;
 
 class AdController extends Controller

@@ -1,0 +1,1 @@
+Jusu skelbimas buvo sukurtas
